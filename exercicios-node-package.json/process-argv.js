@@ -1,0 +1,1 @@
+console.log("testando console.log no terminal")
