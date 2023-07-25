@@ -1,10 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.products = exports.users = exports.data2 = void 0;
-// data e hora atual a região
+exports.products = exports.users = exports.allUsers = exports.creatUser = exports.data2 = void 0;
 let data = new Date();
-// O data.valueOf() irá retornar a data em ms (milissegundos). Então é preciso converter o GMT também em milissegundos: data.getTimezoneOffset() * 60000.
 exports.data2 = new Date(data.valueOf() - data.getTimezoneOffset() * 60000);
+function creatUser(id, name, email, password) {
+    const createdAt = new Date().toDateString();
+    const newUser = {
+        id: id,
+        name: name,
+        email: email,
+        password: password,
+        createdAt: createdAt,
+    };
+    exports.users.push(newUser);
+    return "cadastro realizado com sucesso";
+}
+exports.creatUser = creatUser;
+creatUser("u003", "Astrodev", "astrodev@email.com", "astrodev99");
+function getAllUsers() {
+    return exports.users;
+}
+exports.allUsers = getAllUsers();
 exports.users = [{
         id: "Marilia07",
         name: "Marilia",
