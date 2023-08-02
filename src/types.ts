@@ -10,6 +10,6 @@ export type TProducts = {
     id: string,
     name: string, 
     price: number,
-    desciption: string, 
+    description: string, 
     imageUrl: string
 }
