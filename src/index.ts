@@ -2,7 +2,6 @@ import { TUsers, TProducts } from "./types";
 import { users, products, data2 } from "./database";
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import { privateDecrypt } from "crypto";
 
 const app = express();
 
