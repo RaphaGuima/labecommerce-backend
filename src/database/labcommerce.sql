@@ -1,4 +1,4 @@
--- Active: 1691504355894@@127.0.0.1@3306
+-- Active: 1691603350762@@127.0.0.1@3306
 
 CREATE TABLE
     users (
@@ -183,7 +183,7 @@ CREATE TABLE purchases (
     created_at TEXT NOT NULL,
     FOREIGN KEY (buyer) REFERENCES users(id)
     ON UPDATE CASCADE
-    ON DELETE CASCADE,
+    ON DELETE CASCADE
 );
 
 
